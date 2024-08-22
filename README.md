@@ -1,2 +1,2 @@
-# css--starting-style
+# css-starting-style
 demo @starting-style
