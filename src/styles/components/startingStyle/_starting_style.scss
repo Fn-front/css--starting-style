@@ -8,11 +8,21 @@
     height: 100%;
     background-color: #fff;
     &_ver_animation{
-      animation: ani 3s ease-in-out infinite alternate;
+      &.is_active{
+        display: block;
+        animation: ani 3s ease-in-out infinite alternate;
+      }
     }
     &_ver_transition{
-      @starting-style {
-        width: 0%;
+      transition: width 3s ease-in-out;
+      &.is_active{
+        display: block;
+        width: 100%;
+        &.starting-style{
+          @starting-style {
+            width: 0%;
+          }
+        }
       }
     }
   }
