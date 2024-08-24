@@ -1,11 +1,13 @@
+import { useState } from 'react'
+
 export default function Home() {
 
-  const handleAnimation = () => {}
+  const [animation, setAnimation] = useState<boolean>(Boolean)
 
   return (
     <>
       <h2 className="c_h2">animationは、display: noneでも動く</h2>
-      <button className="c_button" onClick={handleAnimation}>onClick!</button>
+      <button className="c_button" onClick={() => setAnimation((prev) => !prev)}>onClick!</button>
       <div className="c_starting_style">
         <div className="c_starting_style_item c_starting_style_item_ver_animation"></div>
       </div>
