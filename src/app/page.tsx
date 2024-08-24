@@ -4,14 +4,14 @@ import { useState } from 'react'
 
 export default function Home() {
 
-  const [animation, setAnimation] = useState<boolean>(Boolean)
+  const [animation, setAnimation] = useState<boolean>(false)
 
   return (
     <>
       <h2 className="c_h2">animationは、display: noneでも動く</h2>
       <button className="c_button" onClick={() => setAnimation((prev) => !prev)}>onClick!</button>
       <div className="c_starting_style">
-        <div className="c_starting_style_item c_starting_style_item_ver_animation"></div>
+        <div className={`c_starting_style_item ${animation ? 'c_starting_style_item_ver_animation' : ''}`}></div>
       </div>
 
       <h2 className="c_h2">Transition @starting-style 設定あり</h2>
