@@ -1,6 +1,6 @@
 .c_starting_style {
-  width: 100px;
-  height: 30px;
+  width: 200px;
+  height: 50px;
   border: 1px solid #fff;
 	&_item{
     display: none;
@@ -10,10 +10,10 @@
     &_ver_animation{
       animation: ani 3s ease-in-out infinite alternate;
     }
-    &_have_style{
-      // @starting-style {
-      //   width: 0%;
-      // }
+    &_ver_transition{
+      @starting-style {
+        width: 0%;
+      }
     }
   }
 }
